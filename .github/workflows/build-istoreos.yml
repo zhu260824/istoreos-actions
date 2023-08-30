@@ -173,7 +173,7 @@ jobs:
         name: OpenWrt_firmware${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
-     - name: 上传固件到 cowtransfer
+    - name: 上传固件到 cowtransfer
       id: cowtransfer
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
       run: |
