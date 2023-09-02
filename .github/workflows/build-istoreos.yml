@@ -31,7 +31,7 @@ jobs:
         REPO_BRANCH:
           # - main
           # - istoreos-21.02
-          - istoreos-22.03
+          - istoreos-23.05
         ARCHITECTURE:
           # - rk33xx
           # - rk35xx
@@ -215,15 +215,15 @@ jobs:
         🔒 密码: password " >> release.txt
         echo "::set-output name=status::success"
 
-    - name: 自动发布固件到 Releases
-      uses: softprops/action-gh-release@v1
-      if: steps.tag.outputs.status == 'success' && !cancelled()
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ steps.tag.outputs.release_tag }}
-        body_path: release.txt
-        files: ${{ env.FIRMWARE }}/*
+    # - name: 自动发布固件到 Releases
+    #   uses: softprops/action-gh-release@v1
+    #   if: steps.tag.outputs.status == 'success' && !cancelled()
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #   with:
+    #     tag_name: ${{ steps.tag.outputs.release_tag }}
+    #     body_path: release.txt
+    #     files: ${{ env.FIRMWARE }}/*
 
     - name: 删除运行记录
       uses: GitRML/delete-workflow-runs@main
