@@ -20,7 +20,8 @@
 # echo 'src-git freifunk https://github.com/freifunk/openwrt-packages.git' >>feeds.conf.default
 # echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 # echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
-echo 'src-git small8 https://github.com/kenzok8/small-package' >>feeds.conf.default
+# echo 'src-git small8 https://github.com/kenzok8/small-package' >>feeds.conf.default
+echo 'src/gz openwrt_kiddin9 https://dl.openwrt.ai/latest/packages/x86_64' >>feeds.conf.default
 
 
 
