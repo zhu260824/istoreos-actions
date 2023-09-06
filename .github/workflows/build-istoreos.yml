@@ -30,8 +30,8 @@ jobs:
       matrix:
         REPO_BRANCH:
           # - main
-          # - istoreos-21.02
-          - istoreos-23.05
+          - istoreos-21.02
+          # - istoreos-23.05
         ARCHITECTURE:
           # - rk33xx
           # - rk35xx
